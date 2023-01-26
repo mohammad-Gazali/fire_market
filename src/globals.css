@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .mypadx {
+        @apply md:px-8 px-4
+    }
+
+    .mypady {
+        @apply py-4
+    }
+
+    .myp {
+        @apply mypadx mypady
+    }
+
+    .btn {
+        @apply flex justify-center items-center px-6 py-2 rounded-full uppercase text-base active:scale-90 transition-all
+    }
+
+    .btni {
+        @apply flex justify-center items-center pl-4 pr-6 py-2 rounded-full uppercase text-base  gap-[6px] active:scale-90 transition-all
+    }
+
+    .btn-myorange {
+        @apply btn bg-myorange text-white hover:bg-orange-500
+    }
+
+    .btn-myyellow {
+        @apply btn bg-myyellow text-black hover:bg-yellow-400
+    }
+
+    .btn-mydark {
+        @apply btn bg-mydark text-white hover:bg-gray-800
+    }
+
+    .btn-myblue {
+        @apply btn bg-myblue text-white hover:bg-cyan-600
+    }
+
+    .btn-mylightblue {
+        @apply btn bg-mylightblue text-black hover:bg-sky-300
+    }
+
+    .btni-myorange {
+        @apply btni bg-myorange text-white hover:bg-orange-500
+    }
+
+    .btni-myyellow {
+        @apply btni bg-myyellow text-black hover:bg-yellow-400
+    }
+
+    .btni-mydark {
+        @apply btni bg-mydark text-white hover:bg-gray-800
+    }
+
+    .btni-myblue {
+        @apply btni bg-myblue text-white hover:bg-cyan-600
+    }
+
+    .btni-mylightblue {
+        @apply btni bg-mylightblue text-black hover:bg-sky-300
+    }
+}
