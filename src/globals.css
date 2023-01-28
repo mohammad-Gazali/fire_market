@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    scroll-behavior: smooth;
+}
+
 
 @layer components {
     .mypadx {
@@ -62,5 +66,43 @@
 
     .btni-mylightblue {
         @apply btni bg-mylightblue text-black hover:bg-sky-300
+    }
+}
+
+.bg__gradient {
+    background: hsla(217, 100%, 50%, 1);
+    background: linear-gradient(0deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(0deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(0deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+}
+
+.text__gradient {
+    background: hsla(33, 100%, 53%, 1);
+    background: linear-gradient(180deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* handle hero image responsivity */
+@media (max-width: 920px) {
+    .hero-image {
+        display: none;
+    }
+
+    .wrap-content {
+        justify-content: center;
+    }
+
+    .content {
+        padding-top: 2.5rem;
+        padding-bottom: 0.75rem;
+        align-items: center;
+    }
+
+    .content p:nth-of-type(3) {
+        padding-left: 7rem;
+        padding-right: 7rem;
+        text-align: center;
     }
 }

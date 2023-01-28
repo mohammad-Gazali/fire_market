@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import { LinkType } from '@/mytypes';
+import { LinkType } from 'mytypes';
 
 
 const NavLink = ({ href, name }: LinkType) => {

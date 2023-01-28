@@ -1,4 +1,4 @@
-import { IconLinkType } from '@/mytypes'
+import { IconLinkType } from 'mytypes'
 import Link from 'next/link'
 import React from 'react'
 
