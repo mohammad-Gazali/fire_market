@@ -1,23 +1,24 @@
 import { PhoneType } from "mytypes";
 import { GetStaticProps } from "next";
-import { Hero, Phones } from "./components";
+import { Hero, Phones } from "../components";
 
 
 export default function Home({ phones }: { phones: PhoneType[] }) {
 	return (
-		<div className="text-2xl text-center">
+		<main className="text-2xl text-center">
 			<Hero />
       <Phones phones={phones} />
-		</div>
+		</main>
 	);
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch(`${process.env.HOST}/api/phones`)
+  const response = await fetch(`${process.env.HOST}`)
   const phones: PhoneType[] = await response.json()
   return {
       props: {
         phones
-      }
+      },
+      revalidate: 60
   }
 }

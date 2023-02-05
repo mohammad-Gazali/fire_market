@@ -27,7 +27,7 @@ const Phone = ({ phone }: { phone: PhoneType }) => {
         </ul>
         <hr className='border-myyellow/60 shadow-xl my-3 h-[1px] w-full' />
         <div className='flex gap-2'>
-            <Link className='btni-myyellow w-44' href="/">
+            <Link className='btni-myyellow w-44' href={`/${phone.id}`}>
                 <BiDetail /> details
             </Link>
             <Link className='btni-myyellow w-44' href="/">
